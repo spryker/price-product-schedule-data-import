@@ -60,6 +60,7 @@ class PreparePriceDataStep implements DataImportStepInterface
      */
     protected function isPriceValid(?int $price): bool
     {
+        // @phpstan-ignore notIdentical.alwaysTrue
         return $price === null || ($price !== null && $price > 0);
     }
 }
