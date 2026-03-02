@@ -25,19 +25,11 @@ class PriceProductScheduleListNameToIdStep implements DataImportStepInterface
      */
     protected $idPriceProductScheduleListCache = [];
 
-    /**
-     * @param \Spryker\Zed\PriceProductScheduleDataImport\PriceProductScheduleDataImportConfig $config
-     */
     public function __construct(PriceProductScheduleDataImportConfig $config)
     {
         $this->config = $config;
     }
 
-    /**
-     * @param \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface $dataSet
-     *
-     * @return void
-     */
     public function execute(DataSetInterface $dataSet): void
     {
         $listName = $this->config->getPriceProductScheduleListDefaultName();
@@ -54,9 +46,6 @@ class PriceProductScheduleListNameToIdStep implements DataImportStepInterface
         $dataSet[PriceProductScheduleDataSetInterface::FK_PRICE_PRODUCT_SCHEDULE_LIST] = $this->idPriceProductScheduleListCache[$listName];
     }
 
-    /**
-     * @return \Orm\Zed\PriceProductSchedule\Persistence\SpyPriceProductScheduleListQuery
-     */
     protected function createPriceProductScheduleListQuery(): SpyPriceProductScheduleListQuery
     {
         return SpyPriceProductScheduleListQuery::create();

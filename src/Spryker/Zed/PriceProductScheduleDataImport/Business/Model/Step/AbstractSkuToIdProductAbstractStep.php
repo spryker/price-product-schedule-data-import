@@ -56,9 +56,6 @@ class AbstractSkuToIdProductAbstractStep implements DataImportStepInterface
         $dataSet[PriceProductScheduleDataSetInterface::FK_PRODUCT_ABSTRACT] = $this->idProductAbstractCache[$productAbstractSku];
     }
 
-    /**
-     * @return \Orm\Zed\Product\Persistence\SpyProductAbstractQuery
-     */
     protected function createPriceProductScheduleListQuery(): SpyProductAbstractQuery
     {
         return SpyProductAbstractQuery::create();

@@ -56,9 +56,6 @@ class ConcreteSkuToIdProductStep implements DataImportStepInterface
         $dataSet[PriceProductScheduleDataSetInterface::FK_PRODUCT_CONCRETE] = $this->idProductCache[$productConcreteSku];
     }
 
-    /**
-     * @return \Orm\Zed\Product\Persistence\SpyProductQuery
-     */
     protected function createProductQuery(): SpyProductQuery
     {
         return SpyProductQuery::create();

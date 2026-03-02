@@ -20,11 +20,6 @@ class PriceTypeToIdPriceTypeStep implements DataImportStepInterface
      */
     protected $idPriceProductTypeCache = [];
 
-    /**
-     * @param \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface $dataSet
-     *
-     * @return void
-     */
     public function execute(DataSetInterface $dataSet): void
     {
         $priceProductTypeName = $dataSet[PriceProductScheduleDataSetInterface::KEY_PRICE_TYPE];
@@ -46,19 +41,11 @@ class PriceTypeToIdPriceTypeStep implements DataImportStepInterface
         $dataSet[PriceProductScheduleDataSetInterface::FK_PRICE_TYPE] = $this->idPriceProductTypeCache[$priceProductTypeName];
     }
 
-    /**
-     * @return \Orm\Zed\PriceProduct\Persistence\SpyPriceTypeQuery
-     */
     protected function createSpyPriceTypeQuery(): SpyPriceTypeQuery
     {
         return SpyPriceTypeQuery::create();
     }
 
-    /**
-     * @param string $priceProductTypeName
-     *
-     * @return string
-     */
     protected function preparePriceProductTypeName(string $priceProductTypeName): string
     {
         return trim($priceProductTypeName);

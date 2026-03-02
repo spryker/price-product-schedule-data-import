@@ -51,73 +51,46 @@ class PriceProductScheduleDataImportBusinessFactory extends DataImportBusinessFa
         return $dataImporter;
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createAbstractSkuToIdProductAbstractStep(): DataImportStepInterface
     {
         return new AbstractSkuToIdProductAbstractStep();
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createConcreteSkuToIdProductStep(): DataImportStepInterface
     {
         return new ConcreteSkuToIdProductStep();
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createStoreNameToIdStoreStep(): DataImportStepInterface
     {
         return new StoreNameToIdStoreStep();
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createCurrencyToIdCurrencyStep(): DataImportStepInterface
     {
         return new CurrencyToIdCurrencyStep();
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createPriceProductScheduleListNameToIdStep(): DataImportStepInterface
     {
         return new PriceProductScheduleListNameToIdStep($this->getConfig());
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createPriceTypeToIdPriceTypeStep(): DataImportStepInterface
     {
         return new PriceTypeToIdPriceTypeStep();
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createPreparePriceDataStep(): DataImportStepInterface
     {
         return new PreparePriceDataStep();
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createPriceProductScheduleWriterStep(): DataImportStepInterface
     {
         return new PriceProductScheduleWriterStep();
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createDateValidatorStep(): DataImportStepInterface
     {
         return new DateValidatorStep();

@@ -48,11 +48,6 @@ class PriceProductScheduleWriterStep implements DataImportStepInterface
         $this->savePriceProductSchedule($priceProductScheduleEntity, $dataSet);
     }
 
-    /**
-     * @param \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface $dataSet
-     *
-     * @return \Orm\Zed\PriceProductSchedule\Persistence\SpyPriceProductScheduleQuery
-     */
     protected function createPriceProductScheduleQuery(DataSetInterface $dataSet): SpyPriceProductScheduleQuery
     {
         $priceProductScheduleQuery = SpyPriceProductScheduleQuery::create();
@@ -77,12 +72,6 @@ class PriceProductScheduleWriterStep implements DataImportStepInterface
         return $priceProductScheduleQuery;
     }
 
-    /**
-     * @param \Orm\Zed\PriceProductSchedule\Persistence\SpyPriceProductSchedule $priceProductScheduleEntity
-     * @param \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface $dataSet
-     *
-     * @return void
-     */
     protected function savePriceProductSchedule(
         SpyPriceProductSchedule $priceProductScheduleEntity,
         DataSetInterface $dataSet

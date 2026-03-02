@@ -52,9 +52,6 @@ class StoreNameToIdStoreStep implements DataImportStepInterface
         $dataSet[PriceProductScheduleDataSetInterface::FK_STORE] = $this->idStoreCache[$storeName];
     }
 
-    /**
-     * @return \Orm\Zed\Store\Persistence\SpyStoreQuery
-     */
     protected function createStoreQuery(): SpyStoreQuery
     {
         return SpyStoreQuery::create();

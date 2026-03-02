@@ -45,22 +45,12 @@ class DateValidatorStep implements DataImportStepInterface
         }
     }
 
-    /**
-     * @param \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface $dataSet
-     *
-     * @return bool
-     */
     protected function hasDataSetDates(DataSetInterface $dataSet): bool
     {
         return !empty($dataSet[PriceProductScheduleDataSetInterface::KEY_INCLUDED_FROM]) &&
             !empty($dataSet[PriceProductScheduleDataSetInterface::KEY_INCLUDED_TO]);
     }
 
-    /**
-     * @param \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface $dataSet
-     *
-     * @return bool
-     */
     protected function isEndDateGreaterThanStartDate(DataSetInterface $dataSet): bool
     {
         $startDate = new DateTime($dataSet[PriceProductScheduleDataSetInterface::KEY_INCLUDED_FROM]);

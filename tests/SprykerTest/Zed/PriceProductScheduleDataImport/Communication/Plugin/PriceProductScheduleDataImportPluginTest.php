@@ -48,9 +48,6 @@ class PriceProductScheduleDataImportPluginTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         parent::setUp();
@@ -58,9 +55,6 @@ class PriceProductScheduleDataImportPluginTest extends Unit
         $this->tester->ensureDatabaseTableIsEmpty();
     }
 
-    /**
-     * @return void
-     */
     protected function tearDown(): void
     {
         parent::tearDown();
@@ -68,9 +62,6 @@ class PriceProductScheduleDataImportPluginTest extends Unit
         $this->tester->ensureDatabaseTableIsEmpty();
     }
 
-    /**
-     * @return void
-     */
     public function testImportImportsPriceProductSchedules(): void
     {
         //Assign
@@ -105,9 +96,6 @@ class PriceProductScheduleDataImportPluginTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testGetImportTypeReturnsTypeOfImporter(): void
     {
         //Assign

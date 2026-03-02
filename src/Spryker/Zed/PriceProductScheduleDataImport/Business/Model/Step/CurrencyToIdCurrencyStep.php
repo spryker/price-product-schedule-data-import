@@ -52,9 +52,6 @@ class CurrencyToIdCurrencyStep implements DataImportStepInterface
         $dataSet[PriceProductScheduleDataSetInterface::FK_CURRENCY] = $this->idCurrencyCache[$currencyCode];
     }
 
-    /**
-     * @return \Orm\Zed\Currency\Persistence\SpyCurrencyQuery
-     */
     protected function createProductQuery(): SpyCurrencyQuery
     {
         return SpyCurrencyQuery::create();

@@ -47,9 +47,6 @@ class PriceProductScheduleDataImportConfig extends DataImportConfig
         return static::PRICE_PRODUCT_SCHEDULE_LIST_DEFAULT_NAME;
     }
 
-    /**
-     * @return string
-     */
     protected function getModuleRoot(): string
     {
         $moduleRoot = realpath(

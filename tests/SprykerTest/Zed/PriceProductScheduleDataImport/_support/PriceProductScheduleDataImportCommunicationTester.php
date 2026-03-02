@@ -28,9 +28,6 @@ class PriceProductScheduleDataImportCommunicationTester extends Actor
 {
     use _generated\PriceProductScheduleDataImportCommunicationTesterActions;
 
-    /**
-     * @return void
-     */
     public function ensureDatabaseTableIsEmpty(): void
     {
         $priceProductScheduleQuery = $this->getPriceProductScheduleQuery();
@@ -38,9 +35,6 @@ class PriceProductScheduleDataImportCommunicationTester extends Actor
         $priceProductScheduleQuery->deleteAll();
     }
 
-    /**
-     * @return \Orm\Zed\PriceProductSchedule\Persistence\SpyPriceProductScheduleQuery
-     */
     public function getPriceProductScheduleQuery(): SpyPriceProductScheduleQuery
     {
         return SpyPriceProductScheduleQuery::create();
